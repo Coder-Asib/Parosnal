@@ -21,7 +21,8 @@
 		autoplayHoverPause: true,
 		responsive: {
 		  0: {
-			items: 3
+			items: 3,
+			autoWidth:false,
 		  },
 		  600: {
 			items: 5
@@ -33,7 +34,7 @@
 	  })
 	// slide-end
 
-
+	
 
 
 
