@@ -329,6 +329,7 @@ label {
 .header-area {
 	position: relative;
 	z-index: 999;
+	background-repeat: no-repeat;
 }
 .header-background {
 	background: #FFFFFF;
