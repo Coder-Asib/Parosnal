@@ -395,18 +395,19 @@
 
     .slider-area.pt-100 {
         position: relative;
+        padding-bottom: 100px;
       }
       .slider-title p {
         position: absolute;
-        bottom: -50px;
+        bottom: 10px;
         width: 100%;
         left: 0;
         font-size: 16px;
         line-height: 24px;
-        z-index: 999;
+        z-index: -999;
       }
       .patient-text {
-        margin-top: 130px;
+        margin-top: 50px;
       }
       .slider-title {
         padding-bottom: 25px;
@@ -474,6 +475,19 @@
     .footer-text.text-center.pb-65 {
         padding-bottom: 30px;
     }
+    .slider-items.owl-carousel .owl-stage {
+        padding-left: 0 !important;
+    }
+
+    .mobile-slide-padding{
+        padding-right: 0 !important;
+    }
+
+
+
+
+
+
 }
 /* small mobile :320px. */
 @media (min-width: 575px) and (max-width: 767px) {
