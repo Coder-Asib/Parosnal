@@ -246,12 +246,12 @@ label {
 /*humburger menu*/
 .hamburger-menu {
 	cursor: pointer;
-	position: absolute;
-	right: 150px;
+	right: 10%;
 	display: none;
 	z-index: 999;
-	top: 10%;
-	transform: translateY(-50%);
+	top: 85px;
+	transform: translate(-50%,-50%);
+	position: fixed;
 }
 .hamburger-menu span {
 	background: #000;
@@ -294,7 +294,7 @@ label {
 	padding: 23px 15px 23px 40px;
 }
 .logo img {
-	width: 100%;
+	width: 160px;
 }
 .main-menu ul li {
   display: inline-block;
@@ -602,7 +602,6 @@ label {
 
 /* sticky active */
 .header-background.is-stick .hamburger-menu{
-	margin-top: 35px;
 	right: 50px;
 }
 .header-background.is-stick {
@@ -615,7 +614,6 @@ label {
 	left: 0;
 	margin: 0px auto;
 	border-radius: 0;
-	padding: 14px 200px;
 }
 
 .header-background.is-stick .menu-bg {

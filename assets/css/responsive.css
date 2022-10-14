@@ -67,7 +67,7 @@
         color: #213559;
     }
     .main-menu ul li a {
-        font-size: 18px;
+        font-size: 16px;
     }
     .header-area {
         text-align: center;
@@ -191,6 +191,13 @@
  
 /* small mobile :320px. */
 @media (max-width: 767px){   
+    .header-background.is-stick .hamburger-menu {
+        cursor: pointer;
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
     .header-background {
         box-shadow: none;
     }
@@ -569,8 +576,14 @@
 }
 
 @media (min-width: 320px) and (max-width: 575px){
+
+    .header-background.mt-45.is-stick .hamburger-menu {
+        position: absolute;
+        top: 50%;
+        display: block;
+        transform: translate(-50%,-50%);
+    }
     .header-background.is-stick .hamburger-menu {
-        margin-top: 32px;
         right: 30px;
     }
     .header-background.is-stick #menu {
@@ -578,12 +591,7 @@
         padding-top: 50px;
       }
     /* menu active */
-    .hamburger-menu{
-        display: block;
-        position: absolute;
-        right: 10%;
-        top: 13%;
-    }
+ 
     #menu{
         position: fixed;
         top: 0;
