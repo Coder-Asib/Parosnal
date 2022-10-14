@@ -190,46 +190,53 @@
 
  
 /* small mobile :320px. */
-@media (max-width: 767px){
-    .header-background.mt-45 {
-        margin-top: 0;
-        padding: 26px 31px;
-    }
-    
+@media (max-width: 767px){   
     .header-background {
         box-shadow: none;
     }
-    .main-menu ul {
-        display: none;
+    .header-background.is-stick #menu {
+        margin-top: 80px;
+        padding-top: 50px;
+      }
+    /* menu active */
+    .hamburger-menu{
+        display: block;
     }
-    /* humbuger-menu-start */
-    .icon {
-       display: block;
-    }   
-    .slider-content p {
-       font-size: 17px;
-    }   
-    .card-body {
-       font-size: 13px;
-    }   
-    .response-menu ul {
-       display: block;
+    #menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        padding-top: 88px;
+        text-align: left;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        padding-left: 15px;
     }
-    .logo {
-        float: left;
+    #menu.current{
+        left: 50%;
     }
-    .humbuger {
-        position: absolute;
-        /* top: 100px; */
-        right: 120px;
-        height: 3px;
-        width: 19px;
-        background: #213559;
-        transform: translate(-50%,-50%);
-        top: 4.5%;
-        cursor: pointer;
+    #menu {
+        text-align: left !important;
     }
-    /* humbuger-menu-end */
+    #menu li {
+        display: block;
+        padding-right: 0;
+    }
+    #menu li a::before {
+        bottom: 0px;
+    }
+    .main-menu ul li {
+        padding: 30px 0px;
+        text-align: center;
+    }
     
     .header-area {
         text-align: center;
@@ -482,7 +489,10 @@
     .mobile-slide-padding{
         padding-right: 0 !important;
     }
-
+    .logo img {
+        width: 30%;
+        float: left;
+    }
 
 
 
@@ -491,18 +501,41 @@
 }
 /* small mobile :320px. */
 @media (min-width: 575px) and (max-width: 767px) {
-    .humbuger {
-        position: absolute;
-        /* top: 100px; */
-        right: 120px;
-        height: 3px;
-        width: 19px;
-        background: #213559;
-        transform: translate(-50%,-50%);
-        top: 6.3%;
-        cursor: pointer;
+    /* menu active */
+    .hamburger-menu{
+        display: block;
     }
-    
+    #menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        padding-top: 150px;
+        text-align: left;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        padding-left: 15px;
+    }
+    #menu.current{
+        left: 50%;
+    }
+    #menu {
+        text-align: left !important;
+    }
+    #menu li {
+        display: block;
+        padding-right: 0;
+    }
+    #menu li a::before {
+        bottom: 0px;
+    }
     .shape {
         position: absolute;
         z-index: -1;
@@ -536,19 +569,54 @@
 }
 
 @media (min-width: 320px) and (max-width: 575px){
-    .humbuger {
-        position: absolute;
-        top: 100px;
+    .header-background.is-stick .hamburger-menu {
+        margin-top: 32px;
         right: 30px;
-        height: 3px;
-        width: 19px;
-        background: #213559;
-        transform: translate(-50%,-50%);
-        top: 6.8%;
-        cursor: pointer;
+    }
+    .header-background.is-stick #menu {
+        margin-top: 64px;
+        padding-top: 50px;
+      }
+    /* menu active */
+    .hamburger-menu{
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 13%;
+    }
+    #menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        padding-top: 88px;
+        text-align: left;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        padding-left: 15px;
+    }
+    #menu.current{
+        left: 50%;
+    }
+    #menu {
+        text-align: left !important;
+    }
+    #menu li {
+        display: block;
+        padding: 30px 0;
+    }
+    #menu li a::before {
+        bottom: 0px;
     }
     .logo img {
-        width: 86px;
+        width: 30%;
         float: left;
         margin-top: 0;
     }

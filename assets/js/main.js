@@ -10,6 +10,19 @@
 	    });
 	}());
 
+
+
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+	
+		//>=, not <=
+		if (scroll >= 1) {
+			//clearHeader, not clearheader - caps H
+			$(".header-background").addClass("is-stick");
+		}else{
+			$(".header-background").removeClass("is-stick");
+		};
+	});
 	// slide-start
 	$('.slider-items').owlCarousel({
 		loop: true,
@@ -41,35 +54,10 @@
 
 	
 		
-        // humbuger-menu-start
-                // filter items on button click
-                $('.portfolio-menu').on( 'click', 'button', function() {
-					var filterValue = $(this).attr('data-filter');
-					$grid.isotope({ filter: filterValue });
-			});
-			
-			//for menu active class
-			$('.portfolio-menu button').on('click', function(event) {
-					$(this).siblings('.active').removeClass('active');
-					$(this).addClass('active');
-					event.preventDefault();
-			});
-			$('.icon').click(function(){
-			$('.icon').toggleClass('active');
-			$('.response-menu').toggleClass('active');
-			})  
-			// filter items on button click
-			$('.portfolio-menu').on( 'click', 'button', function() {
-			var filterValue = $(this).attr('data-filter');
-			$grid.isotope({ filter: filterValue });
-			});
-
-
-
-
-
-           
-	//   humbuger-menu-end
+    // Hamburger-menu
+    $('.hamburger-menu').on('click', function () {
+        $('.hamburger-menu, #menu').toggleClass('current');
+    });
 
 	// wow/aos-animetion-start
     var wow = new WOW(
